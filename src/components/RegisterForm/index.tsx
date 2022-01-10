@@ -1,36 +1,32 @@
-import { Box, Stack, Text, Link } from "@chakra-ui/react";
+import { Box, Stack, Text, Link, Flex } from "@chakra-ui/react";
 import { FormFields } from "./FormFields";
 
 export function RegisterForm() {
   return (
     <Stack justifyContent="center" spacing={6}>
-      <Box
+      <Flex
         color="white"
         background="accent.blue"
-        padding={[2, 2, 5]}
-        rounded="md"
-        fontSize={["sm", "md", "lg"]}
+        padding={5}
+        rounded="lg"
+        fontSize={"md"}
         textAlign="center"
-        boxShadow="0 6px 0 rgba(0, 0, 0, .15)"
+        boxShadow="0 8px 0 rgba(0, 0, 0, .2)"
+        justifyContent={"center"}
       >
-        <Text>
+        <Text maxW={[48, "full"]} fontWeight={"thin"}>
           <strong>Try it free 7 days</strong> then $20/mo. thereafter
         </Text>
-      </Box>
+      </Flex>
       <Stack
         background="white"
-        padding={[4, 4, 9]}
+        padding={[6, 6, 9]}
         rounded="lg"
         spacing={[2, 2, 4]}
-        boxShadow="0 6px 0 rgba(0, 0, 0, .15)"
+        boxShadow="0 8px 0 rgba(0, 0, 0, .2)"
       >
         <FormFields />
-        <Text
-          color="gray.400"
-          fontSize={["8px", "8px", "12px"]}
-          textAlign="center"
-          padding={2}
-        >
+        <Text color="gray.400" fontSize={"xs"} textAlign="center" padding={2}>
           By clicking the button, you are agreeing to our{" "}
           <Link href="#" fontWeight="bold" color="primary.red">
             Terms and Services

@@ -14,13 +14,15 @@ import { RegisterForm } from "../components/RegisterForm";
 export default function Home() {
   return (
     <Box
-      height="100vh"
+      height={["100%", "100vh"]}
+      width={"100%"}
       background="primary.red"
       backgroundImage="url('/images/bg-intro-desktop.png')"
+      p={[1, 0]}
     >
       <Container maxWidth={["mobile", "desktop"]} width="100%" height="100%">
         <VStack justifyContent="center" width="100%" height="100%">
-          <SimpleGrid columns={[1, 1, 2]} gap={[0, 2, 2]} height="100%">
+          <SimpleGrid columns={[1, 1, 2]} gap={[0, 2, 16]} height="100%">
             <Introduction />
             <RegisterForm />
           </SimpleGrid>

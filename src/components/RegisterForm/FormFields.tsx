@@ -68,7 +68,7 @@ export function FormFields() {
       >
         {({ isSubmitting }) => (
           <Form>
-            <Stack spacing={[2, 4, 4]}>
+            <Stack spacing={4}>
               {fields.map((fieldItem) => (
                 <Field key={fieldItem.name} name={fieldItem.name}>
                   {({ field, form }) => (
@@ -82,12 +82,19 @@ export function FormFields() {
                         <Input
                           {...field}
                           id={fieldItem.name}
-                          _placeholder={{ color: "gray.500" }}
+                          _placeholder={{
+                            color: "gray.500",
+                          }}
                           type={fieldItem.type}
                           placeholder={fieldItem.placeholder}
-                          fontSize={["xs", "sm"]}
-                          padding={[2, 4, 6]}
-                          fontWeight="500"
+                          fontSize={["sm", "sm"]}
+                          px={5}
+                          py={6}
+                          fontWeight="semibold"
+                          _focus={{
+                            borderWidth: "1px",
+                            borderColor: theme.colors.blackAlpha[700],
+                          }}
                         />
                         <InputRightElement
                           children={
@@ -128,7 +135,7 @@ export function FormFields() {
               color="white"
               textTransform="uppercase"
               fontSize={["sm", "md", "lg"]}
-              padding={[4, 4, 7]}
+              padding={7}
               mt={[4, 4, 5]}
               width="100%"
               boxShadow={`0 4px 0 ${darken(0.1, theme.colors.primary.green)}`}
