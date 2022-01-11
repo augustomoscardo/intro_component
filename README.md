@@ -28,7 +28,7 @@ First, run the development server:
 
 ## URL to visit the application
 
-https://angry-clarke-ddc324.netlify.app/
+https://intro-component-swart.vercel.app/
 
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/augustomoscardo)

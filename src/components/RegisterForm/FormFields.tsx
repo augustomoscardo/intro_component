@@ -71,7 +71,7 @@ export function FormFields() {
             <Stack spacing={4}>
               {fields.map((fieldItem) => (
                 <Field key={fieldItem.name} name={fieldItem.name}>
-                  {({ field, form }) => (
+                  {({ field, form }: any) => (
                     <FormControl
                       isInvalid={
                         form.errors[fieldItem.name] &&
@@ -96,24 +96,22 @@ export function FormFields() {
                             borderColor: theme.colors.blackAlpha[700],
                           }}
                         />
-                        <InputRightElement
-                          children={
-                            <Icon
-                              as={MdError}
-                              color="primary.red"
-                              width={[4, 6]}
-                              height={[4, 6]}
-                              mt={["5px", "10px"]}
-                              opacity={
-                                form.errors[fieldItem.name] &&
-                                form.touched[fieldItem.name]
-                                  ? 1
-                                  : 0
-                              }
-                              transition="opacity 0.2s ease-out"
-                            />
-                          }
-                        />
+                        <InputRightElement>
+                          <Icon
+                            as={MdError}
+                            color="primary.red"
+                            width={[4, 6]}
+                            height={[4, 6]}
+                            mt={["5px", "10px"]}
+                            opacity={
+                              form.errors[fieldItem.name] &&
+                              form.touched[fieldItem.name]
+                                ? 1
+                                : 0
+                            }
+                            transition="opacity 0.2s ease-out"
+                          />
+                        </InputRightElement>
                       </InputGroup>
                       <FormErrorMessage
                         fontStyle="italic"
